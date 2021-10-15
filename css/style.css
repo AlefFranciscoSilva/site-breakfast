@@ -1,0 +1,1697 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #088ecd;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Menu
+*/
+
+header {
+    width: 100%;
+    border-bottom: 2px solid #ffcc00;
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    max-width: 1280px;
+    width: 100%;
+}
+
+.body nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav .logo {
+    width: 50%;
+}
+
+nav .logo a img{
+    width: 16%;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 100%;
+    font-weight: 400;
+    transition: .2s;
+}
+
+nav .mainMenu li a:hover {
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+nav .clickMenu {
+    width: 50%;
+    font-size: 1rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    width: 50%;
+    margin: 1% 0%;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Main
+*/
+
+section.main {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main .central {
+    max-width: 1280px;
+    background-image: url(/assets/redes-sociais.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: space;
+}
+
+.main .main-blur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #088fcd96;
+    backdrop-filter: blur(5px);
+}
+
+.main .main_cta {
+    width: 100%;
+}
+
+.main .main_cta .main_text {
+    padding: 1%;
+    margin: 1%;
+    line-height: 18px;
+    
+}
+
+.main .main_cta .main_text h2 {
+    font-size: 97%;
+    padding: 1% 1% 0% 1%;
+    margin: 1% 1% 0% 1%;
+}
+
+.main .main_cta .main_text h1 {
+    font-size: 160%;
+    padding: 0% 0% 2% 0%;
+    margin: 0% 0% 2% 0%;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.main .main_cta .main_img{
+    width: 100%;
+    padding: 1%;
+    
+}
+
+.main .main_cta .main_img img {
+    width: 20%;
+    
+}
+
+/*
+Botão 3D
+*/
+
+.box3d {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 98%;
+    display: grid;
+    margin: 1% 0% auto;
+}
+
+.wrapper .box {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.wrapper .box .front-face {
+    background: #ffcc00;
+    height: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+.box .front-face .icon {
+    height: 50px;
+}
+
+.box .front-face .icon img {
+    height: 100%;
+}
+
+.box .front-face span,
+.box .back-face span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2%;
+}
+
+.box .back-face span {
+    font-size: 12px;
+}
+
+.box .front-face .icon img,
+.box .front-face span {
+    background: #364f6b;
+    -webkit-background-clip: text;
+    -webkit-text-size-adjust: transparent;
+}
+
+.box .back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 110px;
+    width: 100%;
+    padding: 15px;
+    color: #364f6b;
+    opacity: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: #ffcc00;
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .back-face p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.box:hover .back-face {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.box:hover .front-face {
+    opacity: 0;
+    transform: translateY(-110px) rotateX(90deg);
+}
+
+/*
+Conquistas
+*/
+
+section.conquistas {
+    width: 100%;
+    height: fit-content;
+    padding: 1% 0%;
+    margin: 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffcc00;
+    color: white;
+    
+}
+
+.conquista-single {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn;
+    animation-duration: 2s;
+}
+
+.conquista-single h2 {
+    padding: 1% 1% 1% 0%;
+    margin: 1% 1% 1% 0%;
+}
+
+.conquista-single p {
+    padding: 1% 0%;
+    margin: 1% 0%;
+}
+/*
+Carrosel
+*/
+
+.galeria {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #088ecd;
+}
+
+.galeria .central {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chamada-portifolio {
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+}
+
+.chamada-portifolio h2 {
+    font-size: 150%;
+    margin-bottom: 2%;
+}
+
+.chamada-portifolio p {
+    font-size: 70%;
+}
+
+.slidershow {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin: 1%;
+}
+
+.carrosel {
+    width: auto;
+    padding: 1%;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+}
+
+.carrosel .item {
+    width: 100%;
+}
+
+.vejamais {
+    width: 100%;
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.vejamais a {
+    width: auto;
+    padding: 1% 4%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 70%;
+    border-radius: 25px;
+    background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+    transition: .2s;
+}
+
+.vejamais a:hover {
+    background-color: #d6ac04;
+}
+
+/*
+Parcerias
+*/
+
+section.parceiros {
+    width: 100%;
+    padding: 2%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    background-color: #ffcc00;
+}
+
+.parceiros-titulo h2 {
+    font-size: 70%;
+}
+
+.parceiros-single h2 {
+    font-size: 140%;
+}
+
+/*
+Feedback
+*/
+
+section.feedback {
+    width: 100%;
+    padding: 1%;
+    margin: 0%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback .central {
+    max-width: 1280px;
+    background-image: url(/png/feedback-png.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: space;
+}
+
+.feedback-blur {
+    background: #088fcd96;
+    backdrop-filter: blur(1px);
+}
+
+.feedback-titulo {
+    width: 100%;
+    padding: 1%;
+    margin: 1% 0%;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.feedback-conteudo {
+    width: 100%;
+}
+
+.feedback-single {
+    width: 98%;
+    padding: 2%;
+    margin: 1%;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    background: #088fcdb6;
+}
+
+.feedback-single .depoimento {
+    padding: 1%;
+    font-style: italic;
+    font-size: 70%;
+}
+
+.feedback-single .cliente {
+    padding: 1%;
+}
+
+.feedback-single .cliente h2 {
+    padding: 1% 0% 0%;
+    font-size: 100%;
+}
+
+.feedback-single .cliente h3 {
+    padding: 0% 0% 1%;
+    font-size: 60%;
+}
+
+/*
+Serviços
+*/
+
+.servicos {
+    width: 100%;
+    margin: 0%;
+    padding: 2% 0% 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-top: 4px solid #ffcc00;
+}
+
+.servicos .central {
+    max-width: 1280px;
+}
+
+.servicos .title {
+    font-size: 100%;
+}
+
+.servicos .container {
+    width: 98%;
+    margin: 1.5% 1% 1.5% 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.servicos .container .servicos-container-single {
+    width: 99%;
+    height: auto;
+    padding: 1% 2%;
+    margin: 0% 0.5% 0% 0.5%;
+    border-radius: 5px;
+    background: white;
+}
+
+.servicos .servicos-container-single .titulo {
+    margin: 1% 0% 1% 0%;
+}
+
+.servicos .servicos-container-single h2 {
+    font-size: 110%;
+    color: #088ecd;
+}
+
+.servicos .servicos-container-single h3 {
+    font-size: 80%;
+    color: #088ecd;
+}
+
+.servicos-container-single .listas,
+.servicos-container-single .descricao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 2%;
+    border-top: 2px solid #ffcc00;
+}
+
+.servicos .servicos-container-single .descricao p {
+    font-size: 70%;
+    color: #088ecd;
+}
+
+.servicos ul {
+    font-size: 70%;
+    text-align: left;
+    margin: 1%;
+}
+
+.servicos .central .container .servicos-container-single ul li {
+    color: #088ecd;
+}
+
+/*
+FAQ
+*/
+
+section.novofaq {
+    width: 100%;
+    padding: 1% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-top: 4px solid #ffcc00;
+}
+
+.faq-central {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 1280px;
+}
+
+.faq-titulo {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.faq-titulo h3 {
+    font-size: 120%;
+    color: #364f6b;
+}
+
+.faq-titulo h2 {
+    font-size: 150%;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 2% 2%;
+    
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 10px;
+    background: #ffcc00;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.accordion .contentBx .label:hover {
+    background-color: #d6ac04;
+}
+
+.accordion .contentBx .label h4 {
+    width: 90%;
+    font-size: 80%;
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    align-items: center;
+    border-radius: 0px;
+}
+
+.accordion .contentBx.active .label::before {
+    content: '-';
+    border-radius: 0px;
+}
+
+.accordion .contentBx .fcontent {
+    position: relative;
+    background: #ffffff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.accordion .contentBx .fcontent p {
+    color: #088ecd;
+    font-size: 70%;
+}
+
+.accordion .contentBx.active .fcontent {
+    height: auto;
+    padding: 10px;
+}
+
+/*
+Footer
+*/
+
+footer {
+    width: 100%;
+    background-color: #088ecd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;        
+}
+
+.footer-central {
+    width: 100%;
+}
+
+/*
+CTA
+*/
+
+section.footer_cta {
+    width: 100%;
+    max-height: 13vh;
+    padding: 4% 2%;
+    background-color: #ffcc00;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*
+Rodape
+*/
+
+section.rodape {
+    width: 100%;
+    padding: 0%;
+    margin: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .central {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .icone {
+    width: 90%;
+    margin: 1% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.rodape .icone .logo-icone {
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+}
+
+.rodape .icone .logo-icone img {
+    height: 100%;
+    margin: 1% 0%;
+}
+
+.rodape .icone .texto-icone {
+    width: fit-content;
+    padding-top: 7%;
+    line-height: 22px;
+}
+
+.rodape .icone .texto-icone h2 {
+    font-size: 180%;
+    display: flex;
+    justify-content: center;
+}
+
+.rodape .icone .texto-icone h3 {
+    font-size: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+Contatos
+*/
+
+.rodape .contatos {
+    width: 100%;
+    margin: 2% 0%;
+}
+
+.rodape .contatos h2 {
+    font-size: 150%;
+    margin-bottom: 1%;
+}
+
+.rodape .contatos ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .contatos li a, .rodape .contatos li {
+    width: 100%;
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 23px;
+}
+
+.rodape .contatos li a img, .rodape .contatos li img {
+    width: 20px;
+    margin-right: 1%;
+}
+
+/*
+Redes Sociais
+*/
+
+.rodape .redes-sociais {
+    width: 100%;
+    padding: 1% 0% 0% 0%;
+    margin: 1% 0% 0% 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rodape .redes-sociais div a img {
+    height: 6vh;
+    padding: 0% 2%;
+}
+
+/*
+Copyright
+*/
+
+section.copyright {
+    width: 100%;
+    padding: 1% 0%;
+    font-size: 60%;
+    border-top: 1px solid #ffcc00;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.info-copyright {
+    padding: 1% 0%;
+}
+
+/*
+Animações
+*/
+
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-80px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(80px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -80px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 80px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+@media (max-width: 767px) {
+
+    /*
+    Box 3D
+    */
+
+    .box3d {
+        flex-direction: column;
+    }
+
+    /*
+    Serviços
+    */
+
+    .servicos .servicos-container-single .descricao {
+        margin: 3% 0% 2% 0%;
+    }
+
+    /*
+    FAQ
+    */
+
+    .faq-central {
+        width: 100%;
+    }
+
+    .faq-blur {
+        width: 100%;
+    }
+
+
+    .perguntas {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .per {
+        width: 98%;
+    }
+
+    /*
+    Rodape
+    */
+
+    .rodape .central {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 800px) {
+    
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #088fcd96;
+        backdrop-filter: blur(5px);
+        transition: top 1s ease;
+        display: none;
+        border: 3px solid #ffcc00;
+    }
+
+    nav .mainMenu li a {
+        font-size: 180%;
+        font-weight: 600;
+        background-color: #ffffffb0;
+        color: #088ecd;
+        border-radius: 5px;
+        margin: 5% 0%;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .clickMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {   
+
+    nav .logo a img {
+        width: 12%;
+    }
+    
+    /*
+    Main
+    */
+
+    .main .main_cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main .main_cta .main_text {
+        width: 65%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+    }
+
+    .main .main_cta .main_text h2 {
+        font-size: 155%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+    }
+
+    .main .main_cta .main_text h1 {
+        font-size: 265%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+    }
+
+
+    .main .main_cta .main_img{
+        width: 35%;
+        padding: 2% 1% 1% 1%;   
+    }
+
+    .main .main_cta .main_img img{
+        width: 60%;
+    }
+
+    /*
+    Box 3D
+    */
+
+    .box3d {
+        flex-direction: row;
+    }
+
+    .wrapper .box .front-face, .box .back-face {
+        height: 160px;
+    }
+    
+    .box .front-face span,
+    .box .back-face span {
+        margin-top: 1%;
+        font-size: 18px;
+    }
+
+    .box .back-face p {
+        font-size: 14px;
+    }
+
+     /*
+    Conquistas
+    */
+
+    section.conquistas {
+        flex-direction: row;
+        padding: 0%;
+    }
+
+    .conquista-single {
+        flex-direction: column;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    .conquista-single h2 {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .conquista-single p {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    /*
+    Portifólio
+    */
+
+    .chamada-portifolio h2 {
+        font-size: 280%;
+    }
+
+    .chamada-portifolio p {
+        font-size: 140%;
+    }
+
+    .vejamais a {
+        font-size: 100%;
+    }
+
+    /*
+    Parceiros
+    */
+
+    .parceiros-titulo h2 {
+        font-size: 140%;
+    }
+
+    .parceiros-single h2 {
+        font-size: 240%;
+    }
+
+    /*
+    Feedback
+    */
+
+    .feedback-titulo {
+        font-size: 140%;
+    }
+
+    .feedback-conteudo {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .feedback-single {
+        width: 31%;
+    }
+
+    .feedback-single .depoimento {
+        font-size: 90%;
+    }
+
+    .feedback-single .cliente h2 {
+        font-size: 150%;
+    }
+
+    .feedback-single .cliente h3 {
+        font-size: 100%;
+    }
+
+    /*
+    Serviços
+    */
+
+    .servicos .title {
+        font-size: 140%;
+    }
+
+    .servicos .container .servicos-container-single {
+        width: 90%;
+        margin-bottom: 0%;
+    }
+
+    #design .servicos-container-single h2 {
+        padding: 0% 2%;
+    }
+
+    .servicos .servicos-container-single h2 {
+        font-size: 240%;
+    }
+
+    .servicos .servicos-container-single h3 {
+        font-size: 150%;
+    }
+
+    .servicos .servicos-container-single .descricao p {
+        font-size: 110%;
+    }
+
+    .servicos ul {
+        font-size: 110%;
+    }
+
+    /*
+    FAQ
+    */
+
+    .faq-titulo h3 {
+        font-size: 200%;
+    }
+
+    .faq-titulo h2 {
+        font-size: 300%;
+    }
+
+    .accordion .contentBx .label h4 {
+        font-size: 100%;
+    }
+
+    .accordion .contentBx .fcontent p {
+        font-size: 90%;
+    }
+
+
+    /*
+    Footer
+    */
+
+    section.rodape {
+        display: flex;
+        flex-direction: row;
+        margin: 1% 0%;
+    }
+
+    section.footer_cta {
+        max-height: 8vh;
+        padding: 2%;
+        font-size: 120%;
+    }
+
+    .rodape .central {
+        padding: 0% 1%;
+    }
+
+    /*
+    Contatos
+    */
+
+    .rodape .contatos li img {
+        width: 7%;
+        margin-right: 1%;
+    }
+
+    .rodape .contatos li a, .rodape .contatos li {
+        font-size: 90%;
+    }
+
+    /*
+    Redes Sociais
+    */
+
+    .rodape .redes-sociais {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .rodape .redes-sociais div a img {
+        height: 5vh;
+    }
+
+    /*
+    Copyrighy
+    */
+
+    section.copyright {
+        font-size: 80%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    nav .logo a img {
+        width: 8%;
+    }
+    
+    nav .mainMenu {
+        width: 50%;
+    }
+
+    nav .mainMenu li a {
+        font-size: 100%;
+        text-decoration: 2px underline #ffcc00;
+    }
+
+    /*
+    Box3d
+    */
+
+    .box .front-face .icon {
+        height: 80px;
+    }
+
+    .wrapper .box .front-face, .box .back-face {
+        height: 220px;
+    }
+
+    .box .front-face span, .box .back-face span {
+        font-size: 22px;
+    }
+
+    .box .back-face p {
+        font-size: 19px;
+    }
+
+    /*
+    Main
+    */
+
+    .main .main_cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main .main_cta .main_text {
+        width: 60%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+    }
+
+    .main .main_cta .main_text h2 {
+        font-size: 190%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+    }
+
+    .main .main_cta .main_text h1 {
+        font-size: 325%;
+        padding: 1%;
+        margin: 1%;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+
+    .main .main_cta .main_img{
+        width: 40%;
+        padding: 1%;   
+    }
+
+    .main .main_cta .main_img img{
+        width: 60%;
+    }
+
+    /*
+    Containers
+    */
+
+    /*
+    Conquistas
+    */
+
+    section.conquistas {
+        flex-direction: row;
+        padding: 1%;
+    }
+
+    .conquista-single {
+        flex-direction: column;
+    }
+
+    .conquista-single h2 {
+        font-size: 180%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .conquista-single p {
+        font-size: 120%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    /*
+    Carrosel
+    */
+
+    .galeria {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1% 2%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        background: #088ecd;
+    }
+
+    .galeria .central {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .chamada-portifolio {
+        width: 50%;
+        padding-right: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: unset;
+    }
+
+    .chamada-portifolio h2 {
+        font-size: 310%;
+    }
+
+    .chamada-portifolio p {
+        font-size: 150%;
+    }
+
+    .slidershow {
+        width: 40%;
+    }
+
+    .carrosel .item {
+        width: 100%;
+    }
+
+    .vejamais {
+        width: 100%;
+        padding: 2%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .vejamais a {
+        font-size: 100%;
+    }
+
+    /*
+    Parceiros
+    */
+
+    section.parceiros {
+        padding: 1%;
+    }
+
+    .parceiros-titulo h2 {
+        font-size: 100%;
+    }
+    
+    .parceiros-single h2 {
+        font-size: 200%;
+    }
+
+    /*
+    Feedback
+    */
+
+    .section.feedback {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .feedback-conteudo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .feedback-titulo {
+        padding: 0%;
+        font-size: 120%;
+    }
+    
+    .feedback-single {
+        width: 32%;
+    }
+
+    .feedback-single .depoimento {
+        font-size: 90%;
+    }
+
+    .feedback-single .cliente h2 {
+        padding: 1% 0% 0%;
+        font-size: 150%;
+    }
+    
+    .feedback-single .cliente h3 {
+        padding: 0% 0% 1%;
+        font-size: 90%;
+    }
+
+
+
+    /*
+    Serviços
+    */
+
+    .servicos .title {
+        font-size: 150%;
+    }
+
+    .servicos .central {
+        width: 100%;
+    }
+
+    .servicos .container-pai {
+        width: 100%;
+        padding: 0% 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .servicos .container {
+        width: 90%;
+        margin: 0.5% 0%;
+        padding: 0% 0.5%;
+    }
+
+    .servicos .container .servicos-container-single {
+        width: 100%;
+        padding: 0;
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .servicos-container-single .titulo, 
+    .servicos-container-single .listas,
+    .servicos-container-single .descricao {
+        width: 50%;
+        height: 100%;
+    }
+
+    .servicos .servicos-container-single .titulo {
+        padding: 0% 2%;
+        margin: 0%;
+    }
+
+    .servicos .servicos-container-single h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 240%;
+    }
+    
+    .servicos .servicos-container-single h3 {
+        font-size: 110%;
+    }
+
+    .servicos-container-single .listas,
+    .servicos-container-single .descricao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 4%;
+        background: #ffcc00;
+        border-radius: 15px 5px 5px 65px;
+    }
+
+    .servicos-container-single .listas {
+        padding: 2% 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .servicos-container-single ul {
+        width: 100%;
+        padding: 0% 1%;
+    }
+
+    .servicos ul {
+        font-size: 100%;
+        margin: 0%;
+    }
+
+    .servicos ul li {
+        text-align: center;
+    }
+
+    .servicos .servicos-container-single .descricao p {
+        font-size: 100%;
+        
+    }
+
+    .servicos #midias1, .servicos #site1 {
+        flex-direction: row-reverse;
+    }
+
+    #midias1 .descricao , #site1 .listas {
+        border-radius: 5px 15px 65px 5px;
+    }
+
+    /*
+    FAQ
+    */
+
+    .faq-titulo h3 {
+        font-size: 200%;
+    }
+
+    .faq-titulo h2 {
+        font-size: 300%;
+    }
+
+    .accordion .contentBx .label h4 {
+        font-size: 110%;
+    }
+
+    .accordion .contentBx .fcontent p {
+        font-size: 100%;
+    }
+
+    /*
+    Footer
+    */
+
+    section.footer_cta {
+        padding: 1%;
+        font-size: 120%;
+    }
+
+    /*
+    Rodape
+    */
+
+    section.rodape {
+        display: flex;
+        flex-direction: row;
+        margin: 1% 0%;
+    }
+
+    .rodape .central {
+        margin-top: 2px;
+    }
+
+    .rodape .icone {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .rodape .icone .logo-icone{
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rodape .icone .logo-icone img {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .rodape .icone .texto-icone {
+        width: 60%;
+        padding: 0%;
+    }
+
+    /*
+    Contatos
+    */
+
+    .rodape .contatos {
+        margin: 0%;
+    }
+
+    .rodape .contatos li a, .rodape .contatos li {
+        font-size: 100%;
+        line-height: 25px;
+    }
+
+    .rodape .contatos li a img, .rodape .contatos li img {
+        width: 20px;
+        margin-right: 1%;
+    }
+
+    /*
+    Redes Sociais
+    */
+
+    .rodape .redes-sociais {
+        padding: 0;
+        margin: 0;
+    }
+
+    .rodape .redes-sociais div {
+        width: 33%;
+    }
+
+    .rodape .redes-sociais div a img {
+        width: 50%;
+        height: auto;
+        padding: 0% 2%;
+    }
+
+    /*
+    Copyright
+    */
+
+    section.copyright {
+        font-size: 80%;
+        padding: 0.5% 0%;
+    }
+
+    .info-copyright {
+        padding: 0.2% 0%;
+    }
+
+}
