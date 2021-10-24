@@ -126,7 +126,7 @@ section.main {
 
 .main .central {
     max-width: 1280px;
-    background-image: url(/assets/redes-sociais.png);
+    background-image: url(assets/redes-sociais.png);
     background-size: contain;
     background-position: center;
     background-repeat: space;
@@ -446,7 +446,7 @@ section.feedback {
 
 .feedback .central {
     max-width: 1280px;
-    background-image: url(/png/feedback-png.png);
+    background-image: url(png/feedback-png.png);
     background-size: contain;
     background-position: center;
     background-repeat: space;
@@ -865,7 +865,7 @@ Animações
 
 [data-anime] {
     opacity: 0;
-    transition: .3s;
+    transition: .2s;
 }
 
 [data-anime="left"] {

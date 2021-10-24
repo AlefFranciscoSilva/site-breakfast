@@ -18,7 +18,7 @@ const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate' ;
 
 function animeScroll () {
-    const windowTop = window.pageYOffset + (window.innerHeight * 0.88);
+    const windowTop = window.pageYOffset + (window.innerHeight * 0.90);
     target.forEach(function(element){
         if((windowTop) > element.offsetTop) {
             element.classList.add(animationClass);
@@ -33,7 +33,7 @@ animeScroll();
 if(target.length) {
     window.addEventListener('scroll', debounce(function(){
         animeScroll();
-    }, 200));
+    }, 100));
 }
 
 //Acces all Element
@@ -60,5 +60,5 @@ function show(){
     mainMenu.style.top = '0';
 }
 function close(){
-    mainMenu.style.top = '-100%'
+    mainMenu.style.top = '-120%'
 }
